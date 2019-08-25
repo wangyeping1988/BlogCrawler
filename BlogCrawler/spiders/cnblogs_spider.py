@@ -104,6 +104,8 @@ class CnblogsSpider(scrapy.Spider):
         """2. post edit page"""
         post_title = response.xpath('//input[@id="Editor_Edit_txbTitle"]/@value').extract_first()
         post_content = response.xpath('//textarea[@id="Editor_Edit_EditorBody"]').xpath('text()').extract_first()
+        if post_content[0:2] == '\r\n':
+            post_content = post_content[2:len(post_content)]
         item = CnblogsPostItem()
         item['title'] = post_title
         item['content'] = post_content

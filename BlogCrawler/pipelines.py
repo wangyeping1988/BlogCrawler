@@ -6,12 +6,14 @@
 # See: https://docs.scrapy.org/en/latest/topics/item-pipeline.html
 import codecs
 import os
+import re
 
 
 class BlogcrawlerPipeline(object):
     def process_item(self, item, spider):
         try:
-            post_file = codecs.open('posts' + os.path.sep + item['title'] + '.md', 'wb', encoding='utf-8')
+            rstr = r"[\/\\\:\*\?\"\<\>\|]"
+            post_file = codecs.open('posts' + os.path.sep + re.sub(rstr, "_", item['title']) + '.md', 'wb', encoding='utf-8')
             post_file.write(item['content'])
             post_file.close()
         except(IndexError, TypeError):
