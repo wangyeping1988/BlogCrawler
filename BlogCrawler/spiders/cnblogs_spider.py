@@ -39,7 +39,11 @@ class CnblogsSpider(scrapy.Spider):
         'https://i.cnblogs.com/posts?page=23',
         'https://i.cnblogs.com/posts?page=24',
         'https://i.cnblogs.com/posts?page=25',
-        'https://i.cnblogs.com/posts?page=26'
+        'https://i.cnblogs.com/posts?page=26',
+        'https://i.cnblogs.com/posts?page=27',
+        'https://i.cnblogs.com/posts?page=28',
+        'https://i.cnblogs.com/posts?page=29',
+        'https://i.cnblogs.com/posts?page=30'
     ]
 
     # def start_requests(self):
@@ -77,12 +81,12 @@ class CnblogsSpider(scrapy.Spider):
             yield scrapy.Request(
                 url,
                 cookies={
-                    '.CNBlogsCookie': '6E0D581D816B40292F2CB163F9E2F6103933AE513E86496338B4D8098A447EF63939A0742F7BE1D09364AC1F46272E1B53175A0051B2F2E21476A6051F5FDD91E83A0AED5B2DA4AE02AD96225882AAA12602975F5AB90A169A851961F9B37D620F8C4D34',
-                    '.Cnblogs.AspNetCore.Cookies': 'CfDJ8BQYbW6Qx5RFuF4UTI7QvU118ut7nAbYfnRl0pAOtKCjq7-cwYn6CHWAbA4QwiOkwSvZ1jQu1PYse-z8i-D_Sl-rkl63Nvg_1w-vFssT77vMeEvCbSy2uwWYWHizRZbSazW4aoSLECfVWxioywacv3ZCzryhWkSfV2OKd-6EmsAnijvZ59eW1kYNH1keRodIMGM7k9Il2OvnOVOWSQysJbQPoYrR1uvHPY62avfQdQVhjHt7JhXhz5euovH6kVgZqFeIjUTCyqR6jc1LfS488Kr7-wVb-VMoLGYJFHKW_P2gEwzEImLJg3vYU-_Pp0NH333rhEiKaDnIHS3Y-WUpgaY9tAXSswLYTPFWCuBAe5SeY9nbRQqU9EJuix_fA0StJaNS1Nbc9MoW4LhRxctWJ_8HmnKhjuKW40d4bewALIJpJYot2X8FsS-NTr0LaPsJ4rAAS-zp4K9vlpKW_SsPe29STe_GJ0VKB0p2C18sX7WC',
-                    'SERVERID': '04ead23841720026ba009cb4f597ec8c|1566653061|1566652046',
+                    '.CNBlogsCookie': '84E619B8E4DAB54F9947981FC30E32F41060ACDECCB61C56FB63B1BBC0A7CE091C2A405744975A05BAB6F2927312E36832EEE66F81B83A305A63F1AF8174BCFF4F1B2BB6C8075EB5794389971CB9470FE18C8F7BA15E61E07E9A87203F650E0B776AB18D',
+                    '.Cnblogs.AspNetCore.Cookies': 'CfDJ8DeHXSeUWr9KtnvAGu7_dX_zPcKDhKpFchkREt1kQ8ovZQawHiqUBuIj_9CrHRYxxlku6hAu8yHWBvzU28iW6O81m2o1mFD-5EAT-e6L-Qwwv5n4T-w66SbV_zZzsn_PKZkbnHz48JPPQhwjuAeXebOp-AFXmOu5BQ8mhlhW0Ob7kaI4GZLaPASnFyHgqJnvEc9DELaEBp93EEbVIJzWXjLHcjBRy4-2HIvqJo48SQVcIIV3e3OkqqrXdt_KKqh3LRoPO0rPDeAkWGlPXTk19Dw8MuaihRchNWvDy5K5Gr4zRJe3LgmhEN1FGYSYZFM6B3gyF7R900VfYTiLhSZ2TwmxVkgh60oK6hRhwmdspnBR9X8O8NO5JDQh86rA7jir5li2ljwT0zcV0nOgOt0IT_kLpPrd_MLogY0iOOxiTR6jpY_lQazhFtaJf1B01mct6Tqo5_kZb2BL1li2qdFqBVCtk6x9Zgi82B-jSXaPNRfh',
+                    'SERVERID': '33fdc71a64f9cf564b6409a0da1aa10e|1570628071|1570628071',
                     '__gads': 'ID=ae065093c3816478:T=1523979454:S=ALNI_MYA9AUiW8F72qKRLOTLGedFqt2nLw',
                     '_ga': 'GA1.2.1968144735.1498924730',
-                    '_gid': 'GA1.2.466366568.1566609068'
+                    '_gid': 'GA1.2.921226281.1570628072'
                 },
                 callback=self.parse
             )
