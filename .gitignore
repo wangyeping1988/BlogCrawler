@@ -123,5 +123,9 @@ dmypy.json
 # Pyre type checker
 .pyre/
 
-# ignore downloaded posts
+# ignore downloaded posts and tmp files
 posts/
+items.json
+
+# ignore project files from pycharm
+.idea
