@@ -10,40 +10,40 @@ class CnblogsSpider(scrapy.Spider):
     name = 'cnblogs'
 
     # allowed domains
-    allowed_domains = ['i.cnblogs.com']
+    allowed_domains = ['i1.cnblogs.com']
 
     # entry urls
     start_urls = [
-        'https://i.cnblogs.com/posts',
-        'https://i.cnblogs.com/posts?page=2',
-        'https://i.cnblogs.com/posts?page=3',
-        'https://i.cnblogs.com/posts?page=4',
-        'https://i.cnblogs.com/posts?page=5',
-        'https://i.cnblogs.com/posts?page=6',
-        'https://i.cnblogs.com/posts?page=7',
-        'https://i.cnblogs.com/posts?page=8',
-        'https://i.cnblogs.com/posts?page=9',
-        'https://i.cnblogs.com/posts?page=10',
-        'https://i.cnblogs.com/posts?page=11',
-        'https://i.cnblogs.com/posts?page=12',
-        'https://i.cnblogs.com/posts?page=13',
-        'https://i.cnblogs.com/posts?page=14',
-        'https://i.cnblogs.com/posts?page=15',
-        'https://i.cnblogs.com/posts?page=16',
-        'https://i.cnblogs.com/posts?page=17',
-        'https://i.cnblogs.com/posts?page=18',
-        'https://i.cnblogs.com/posts?page=19',
-        'https://i.cnblogs.com/posts?page=20',
-        'https://i.cnblogs.com/posts?page=21',
-        'https://i.cnblogs.com/posts?page=22',
-        'https://i.cnblogs.com/posts?page=23',
-        'https://i.cnblogs.com/posts?page=24',
-        'https://i.cnblogs.com/posts?page=25',
-        'https://i.cnblogs.com/posts?page=26',
-        'https://i.cnblogs.com/posts?page=27',
-        'https://i.cnblogs.com/posts?page=28',
-        'https://i.cnblogs.com/posts?page=29',
-        'https://i.cnblogs.com/posts?page=30'
+        'https://i1.cnblogs.com/posts',
+        'https://i1.cnblogs.com/posts?page=2',
+        'https://i1.cnblogs.com/posts?page=3',
+        'https://i1.cnblogs.com/posts?page=4',
+        'https://i1.cnblogs.com/posts?page=5',
+        'https://i1.cnblogs.com/posts?page=6',
+        'https://i1.cnblogs.com/posts?page=7',
+        'https://i1.cnblogs.com/posts?page=8',
+        'https://i1.cnblogs.com/posts?page=9',
+        'https://i1.cnblogs.com/posts?page=10',
+        'https://i1.cnblogs.com/posts?page=11',
+        'https://i1.cnblogs.com/posts?page=12',
+        'https://i1.cnblogs.com/posts?page=13',
+        'https://i1.cnblogs.com/posts?page=14',
+        'https://i1.cnblogs.com/posts?page=15',
+        'https://i1.cnblogs.com/posts?page=16',
+        'https://i1.cnblogs.com/posts?page=17',
+        'https://i1.cnblogs.com/posts?page=18',
+        'https://i1.cnblogs.com/posts?page=19',
+        'https://i1.cnblogs.com/posts?page=20',
+        'https://i1.cnblogs.com/posts?page=21',
+        'https://i1.cnblogs.com/posts?page=22',
+        'https://i1.cnblogs.com/posts?page=23',
+        'https://i1.cnblogs.com/posts?page=24',
+        'https://i1.cnblogs.com/posts?page=25',
+        'https://i1.cnblogs.com/posts?page=26',
+        'https://i1.cnblogs.com/posts?page=27',
+        'https://i1.cnblogs.com/posts?page=28',
+        'https://i1.cnblogs.com/posts?page=29',
+        'https://i1.cnblogs.com/posts?page=30'
     ]
 
     # def start_requests(self):
@@ -81,14 +81,14 @@ class CnblogsSpider(scrapy.Spider):
             yield scrapy.Request(
                 url,
                 cookies={
-                    '.CNBlogsCookie': '84E619B8E4DAB54F9947981FC30E32F41060ACDECCB61C56FB63B1BBC0A7CE091C2A405744975A05BAB6F2927312E36832EEE66F81B83A305A63F1AF8174BCFF4F1B2BB6C8075EB5794389971CB9470FE18C8F7BA15E61E07E9A87203F650E0B776AB18D'
+                    '.CNBlogsCookie': '3E1C5E0A81A97E3CCAFB3324983D87DC06BDE64C69D3F8C14E0AC7289FDCDACBA0F8B1E998A696258CB5E9C30086128E78E6126F02F6CF64C6BFBD39D1CBABD8A1AD953FB3DAB1C59AD6F4E1F039320D9002A0542848C8F2DAA33F0A9EB10415D3F4EAF0'
                 },
                 callback=self.parse
             )
 
     def parse(self, response):
         """1. post list page"""
-        edit_page_url = 'https://i.cnblogs.com/EditPosts.aspx?postid={0}&update=1'
+        edit_page_url = 'https://i1.cnblogs.com/EditPosts.aspx?postid={0}&update=1'
         post_list_items = response.xpath('//tr[contains(@id,"post-row-")]')
         for postListItem in post_list_items:
             try:
