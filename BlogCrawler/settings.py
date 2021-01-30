@@ -67,6 +67,7 @@ COOKIES_ENABLED = True
 # See https://docs.scrapy.org/en/latest/topics/item-pipeline.html
 ITEM_PIPELINES = {
    'BlogCrawler.pipelines.BlogcrawlerPipeline': 300,
+   # 'BlogCrawler.pipelines.Kie4crawlerPipeline': 300,
 }
 
 # Enable and configure the AutoThrottle extension (disabled by default)

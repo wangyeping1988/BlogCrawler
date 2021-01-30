@@ -19,3 +19,7 @@ class CnblogsPostItem(scrapy.Item):
     title = scrapy.Field()
     content = scrapy.Field()
     categories = scrapy.Field()
+
+class Kie4Item(scrapy.Item):
+    title = scrapy.Field()
+    links = scrapy.Field()
