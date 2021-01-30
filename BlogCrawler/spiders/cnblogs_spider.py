@@ -43,7 +43,17 @@ class CnblogsSpider(scrapy.Spider):
         'https://i1.cnblogs.com/posts?page=27',
         'https://i1.cnblogs.com/posts?page=28',
         'https://i1.cnblogs.com/posts?page=29',
-        'https://i1.cnblogs.com/posts?page=30'
+        'https://i1.cnblogs.com/posts?page=30',
+        'https://i1.cnblogs.com/posts?page=31',
+        'https://i1.cnblogs.com/posts?page=32',
+        'https://i1.cnblogs.com/posts?page=33',
+        'https://i1.cnblogs.com/posts?page=34',
+        'https://i1.cnblogs.com/posts?page=35',
+        'https://i1.cnblogs.com/posts?page=36',
+        'https://i1.cnblogs.com/posts?page=37',
+        'https://i1.cnblogs.com/posts?page=38',
+        'https://i1.cnblogs.com/posts?page=39',
+        'https://i1.cnblogs.com/posts?page=40'
     ]
 
     # def start_requests(self):
@@ -81,7 +91,7 @@ class CnblogsSpider(scrapy.Spider):
             yield scrapy.Request(
                 url,
                 cookies={
-                    '.CNBlogsCookie': '3E1C5E0A81A97E3CCAFB3324983D87DC06BDE64C69D3F8C14E0AC7289FDCDACBA0F8B1E998A696258CB5E9C30086128E78E6126F02F6CF64C6BFBD39D1CBABD8A1AD953FB3DAB1C59AD6F4E1F039320D9002A0542848C8F2DAA33F0A9EB10415D3F4EAF0'
+                    '.CNBlogsCookie': 'AAA49C92BF3B1871B6ACCB924D521C61DA4F061BFA9A8365048BFE1F4FACB19DCF8C739C9AEAADD2B6E9873BD9E2FB6B8C574CF69670BB100967F0D677F55B116C3C588B1D7E4EDF379BB8CCA61D45DF30F67D15E86C3CEB03051F59D7AD47B6E07C33A5'
                 },
                 callback=self.parse
             )
